@@ -49,3 +49,61 @@ menu.addEventListener("click",function(){
   menu.classList.toggle("block")
 })
 })
+
+
+// ---------------------------------PRODUCT----------------------------------------------------------------
+// --hover ảnh to
+const bigImg =document.querySelector(".product-content-left-big-img img")
+const smallImg =document.querySelectorAll(".product-content-left-small-img img")
+smallImg.forEach(function(imgItem,X){
+  imgItem.addEventListener("click",function(){
+   bigImg.src = imgItem.src
+  })
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------------------------thanh menu click chi tiết and bảo quản
+const baoquan = document.querySelector(".baoquan")
+const chitiet = document.querySelector(".chitiet")
+if(baoquan){
+  baoquan.addEventListener("click",function(){
+    document.querySelector(".product-content-right-buttom-content-chitiet").style.display = "none";
+    document.querySelector(".product-content-right-buttom-content-baoquan").style.display = "block";
+
+    
+  })
+}
+if(chitiet){
+  chitiet.addEventListener("click",function(){
+    document.querySelector(".product-content-right-buttom-content-chitiet").style.display = "block";
+    document.querySelector(".product-content-right-buttom-content-baoquan").style.display = "none";
+  })
+}
+// 
+const butTon = document.querySelector(".product-content-right-buttom-top")
+if(butTon) {
+  butTon.addEventListener("click",function(){
+   document.querySelector(".product-content-right-buttom-content-big").classList.toggle("activeB")
+  })
+}
